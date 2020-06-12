@@ -8,3 +8,18 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
+
+
+## Binaries
+*.class
+*.jar
+bin/
+out/
+
+#IDEs
+*.idea
+*.iml
+.idea/
+.project
+.classpath
+.settings/
