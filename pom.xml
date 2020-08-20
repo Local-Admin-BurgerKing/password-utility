@@ -14,19 +14,19 @@
     -->
     <properties>
         <java.version>1.8</java.version>
-        <app.name></app.name>
-        <app.artifact></app.artifact>
-        <app.version></app.version>
-        <build.starter>example.Main</build.starter>
+        <app.name>pwd-util</app.name>
+        <app.artifact>pwd-util</app.artifact>
+        <app.version>0.9</app.version>
+        <build.starter>com.niton.localadmin.pwdutil.Launcher</build.starter>
 
 		<git.user></git.user>
 		<git.repo></git.repo>
         <!-- Advanced -->
-        <app.group></app.group>
+        <app.group>com.niton.localadmin</app.group>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <sources.test>src/test/java</sources.test>
-        <sources.main>src/main/java</sources.main>
+        <sources.test>src</sources.test>
+        <sources.main>src</sources.main>
         <sources.resource>src/main/resources</sources.resource>
         <sources.resource.exclude>noexport</sources.resource.exclude>
 
@@ -34,12 +34,16 @@
 		<project.build.doc.skip>false</project.build.doc.skip>
         <build.jar>true</build.jar>
         <build.war>false</build.war>
-        <build.goal>install</build.goal>
+        <build.goal>package</build.goal>
         <build.include.dependencys>true</build.include.dependencys>
     </properties>
 
     <dependencies>
-        
+        <dependency>
+            <groupId>com.niton.localadmin</groupId>
+            <artifactId>core</artifactId>
+            <version>1.3.3</version>
+        </dependency>
     </dependencies>
 
 
@@ -71,7 +75,6 @@
     <artifactId>${app.artifact}</artifactId>
     <version>${app.version}</version>
     <name>${app.name}</name>
-
     <profiles>
         <profile>
             <id>runnable-jar</id>
@@ -161,7 +164,7 @@
                             </execution>
                         </executions>
                         <configuration>
-                            <executable>maven</executable>
+                           <!-- <executable>maven</executable>-->
                             <mainClass>${build.starter}</mainClass>
                         </configuration>
                     </plugin>
